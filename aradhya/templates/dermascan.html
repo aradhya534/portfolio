@@ -1,0 +1,50 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/interninspot.css' %}">
+    <title>DermaScan</title>
+</head>
+<body>
+
+        <!--Header design-->
+    <header class="header">
+        <a href="{% url 'home' %}" class="logo">Aradhya Jayawardane</a>
+        <i class='bx bx-menu' id="menu-icon" ></i>
+
+    </header>
+
+
+    <section class="slider">
+        <div class="slides">
+            <img src="{% static 'img/derma_slide1.png' %}" alt="Slide 1">
+            <img src="{% static 'img/derma_slide2.png' %}" alt="Slide 2">
+            <img src="{% static 'img/derma_slide3.png' %}" alt="Slide 3">
+        </div>
+        <!-- Navigation buttons -->
+        <button class="prev">&#10094;</button>
+        <button class="next">&#10095;</button>
+    </section>
+    <section class="about">
+        <div class="about-content">
+            <p>
+                DermaScan is a web-based application designed to help users monitor and understand their skin health. It allows users to upload or 
+                scan images of their skin, providing AI-assisted analysis to detect potential conditions and give informative feedback.
+            </p>
+            <p>
+                The platform includes secure user authentication, enabling personalized experiences and maintaining records of scans, medical history, and chat interactions. Users can also access 
+                educational articles and resources about various skin conditions, making it a comprehensive tool for skin health awareness.
+            </p>
+            <p>
+                Built with Django and REST APIs, DermaScan combines a user-friendly interface with robust backend functionality. 
+                Its interactive features, including an AI-powered chatbot, ensure users receive guidance and support in managing their skin health effectively.
+            </p>
+
+        </div>
+    </section>
+
+    <script src="{% static 'js/interninspot.js' %}"></script>
+</body>
+</html>

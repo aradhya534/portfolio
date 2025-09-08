@@ -1,0 +1,128 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--box icons-->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <!--Custome css-->
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <title>Aradhya Jayawardane</title>
+</head>
+<body>
+    <!--Header design-->
+    <header class="header">
+        <a href="#home" class="logo">Aradhya Jayawardane</a>
+        <i class='bx bx-menu' id="menu-icon" ></i>
+
+        <nav class="navbar">
+            <a href="#home" class="active">Home</a>
+            <a href="#about">About</a>
+            <a href="#portfolio">Portfolio</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <!--home section design-->
+    <section class="home" id="home">
+        <div class="home-content">
+            <h3>Hello I'm</h3>
+            <h1>Aradhya Jayawardane</h1>
+            <h3>And I'm a <span class="multiple-text"></span></h3>
+            <p>“I’m a passionate Data Analyst and aspiring Backend Developer, turning data into actionable insights. I love building smart, efficient solutions that solve real-world problems.”</p>
+            <div class="social-media">
+                <a href="https://www.instagram.com/aradhyadell53/"><i class='bx bxl-instagram' ></i></a>
+                <a href="https://www.linkedin.com/in/aradhya-jayawardane"><i class='bx bxl-linkedin' ></i></a>
+                <a href="https://github.com/aradhya534"><i class='bx bxl-github' ></i></a>
+            </div>
+            <a href="{% static 'files/aradhya_jayawardane.pdf' %}" target="_blank" class="btn">Download CV</a>
+        </div>
+        <div class="home-img">
+            <img src="{% static 'img/pic.jpg' %}" alt="" >
+        </div>
+    </section>
+    <!--about section design-->
+    <section class="about" id="about">
+        <div class="about-img">
+            <img src="{% static 'img/about.jpeg' %}" alt="">
+        </div>
+        <div class="about-content">
+            <h2 class="heading">About <span>Me</span></h2>
+            <h3>Data Analyst</h3>
+            <p>Hello! I'm Malithi Aradhya, currently pursuing two degrees in Information Systems and Applied Data Analytics. I am passionate about coding, data analytics, and building solutions that make a real impact. I
+                 enjoy exploring new technologies and working with datasets to uncover meaningful insights.
+                <span class="about-readmore">
+                    In addition to my academic journey, I am learning backend development and continuously improving my skills in Python and 
+                    JavaScript. I am driven by curiosity and love transforming ideas into efficient, data-driven applications. 
+                    My goal is to leverage my knowledge and passion to create solutions that solve real-world problems while advancing my career in technology.
+                </span>
+            </p>
+            <a href="javascript:void(0)" id="read-more-btn" class="btn">Read More</a>
+        </div>
+    </section>
+
+    <!--portfolio section design-->
+    <section class="portfolio" id="portfolio">
+        <h2 class="heading">Latest <span>Projects</span></h2>
+        <div class="portfolio-container">
+            <div class="portfolio-box">
+                <img src="{% static 'img/portfolio1.png' %}" alt="">
+                <div class="portfolio-layer">
+                    <h4>InterninSpot</h4>
+                    <p>InternInSpot connects students with internships and helps companies find the right talent, making the process simple, smart, and seamless.</p>
+                    <a href="{% url 'interninspot' %}"><i class='bx bx-link-external'></i></a>
+                </div>
+            </div>
+
+            <div class="portfolio-box">
+                <img src="{% static 'img/portfolio2.png' %}" alt="">
+                <div class="portfolio-layer">
+                    <h4>DermaScan</h4>
+                    <p>DermaScan is a web app for scanning and analyzing skin images, providing quick insights and educational resources.</p>
+                    <a href="{% url 'dermascan' %}"><i class='bx bx-link-external'></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--contact section design-->
+    <section class="contact" id="contact">
+         <h2 class="heading">Contact <span>Me!</span></h2>
+
+         <form method="post" action="{% url 'home' %}">
+            {% csrf_token %}
+            
+            <div class="input-box">
+                <input type="text" name="full_name" placeholder="Full Name">
+                <input type="email" name="email" placeholder="Email Address">
+            </div>
+            <div class="input-box">
+                <input type="number" name="phone" placeholder="Mobile Number">
+                <input type="text" name="subject" placeholder="Email Subject">
+            </div>
+            <textarea name="message" id="" cols="30" rows="10" placeholder="Your Message"></textarea>
+            <input type="submit" value="Send Message" class="btn">
+         </form>
+    </section>
+
+    <!--footer section design-->
+    <footer class="footer">
+        <div class="footer-text">
+            <p>Copyright &copy; 2023 All Rights Reserved</p>
+        </div>
+        <div class="footer-iconTop">
+            <a href="#"><i class='bx bx-up-arrow-alt'></i></a>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/scrollreveal"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+
+    <script src="{% static 'js/script.js' %}"></script>
+
+
+</body>
+</html>

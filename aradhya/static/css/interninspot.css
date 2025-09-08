@@ -1,0 +1,128 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    scroll-behavior: smooth;
+    font-family: 'Poppins', sans-serif;
+}
+
+
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+body{
+    background-color: var(--bg-color);
+    color: var(--text-color);
+}
+
+.header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 2rem 9%;
+    background: var(--bg-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+.header a{
+    color: var(--main-color);
+    font-size: 2.4rem;
+}
+.header.sticky{
+    border-bottom: 1rem solid rgba(0,0,0,.2);
+}
+
+
+:root {
+    --bg-color: #1d252c;        /* soft off-white base */
+    --second-bg-color: #eaeef3; /* light gray-blue for sections */
+    --text-color: #ffffff;      /* slate gray for readability */
+    --main-color: #00b894;      /* fresh teal accent */
+}
+
+.header.sticky{
+    border-bottom: 1rem solid rgba(0,0,0,.2);
+}
+
+
+
+
+.slider {
+    position: relative;
+    width: 90%;
+    max-width: 1200px;
+    margin: 10rem auto;
+    overflow: hidden;
+    border-radius: 1rem;
+    box-shadow: 0 0 1rem rgba(0,0,0,0.2);
+    height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.slides {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slides img {
+    width: 100%;
+    max-height: 500px;
+    object-fit: cover;
+    
+    box-shadow: rgba(0, 0, 0, 0.277);
+}
+
+/* Buttons */
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0,0,0,0.5);
+    color: white;
+    border: none;
+    padding: 0.8rem 1.2rem;
+    cursor: pointer;
+    border-radius: 50%;
+    font-size: 2rem;
+    z-index: 10;
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.7);
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+
+.about p{
+    font-size: 1.6rem;
+    padding: 1rem 0;
+    color: var(--text-color);
+}
+
+.about-content{
+    width: 90%;
+    margin: 5rem 10rem;
+
+    padding: 2rem;
+
+    text-align: justify;
+    line-height: 1.6;
+    letter-spacing: 0.05rem;
+}

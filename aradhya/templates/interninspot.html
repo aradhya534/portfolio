@@ -1,0 +1,53 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/interninspot.css' %}">
+    <title>InterninSpot</title>
+</head>
+<body>
+
+        <!--Header design-->
+    <header class="header">
+        <a href="{% url 'home' %}" class="logo">Aradhya Jayawardane</a>
+        <i class='bx bx-menu' id="menu-icon" ></i>
+
+    </header>
+
+
+    <section class="slider">
+        <div class="slides">
+            <img src="{% static 'img/slide1.png' %}" alt="Slide 1">
+            <img src="{% static 'img/slide2.png' %}" alt="Slide 2">
+            <img src="{% static 'img/slide3.png' %}" alt="Slide 3">
+        </div>
+        <!-- Navigation buttons -->
+        <button class="prev">&#10094;</button>
+        <button class="next">&#10095;</button>
+    </section>
+    <section class="about">
+        <div class="about-content">
+            <p>
+            InternInSpot is a web-based platform designed to connect students seeking internships with companies offering opportunities. The platform simplifies the process for students to showcase their skills while helping companies discover suitable candidates efficiently. By bridging the gap between
+            academia and industry, InternInSpot ensures students gain practical exposure and companies benefit from emerging talent.
+            </p>
+            <p>
+                The platform offers key features including student registration and profile creation, company registration and internship posting, and smart matching between candidates and internship opportunities. It provides a simple and responsive user interface and has the 
+                potential for integration with universities to ensure verified listings.
+            </p>
+            <p>
+                Built using HTML, CSS, and JavaScript on the frontend (with React optional), and Django or Node.js for the backend during the prototype stage, InternInSpot uses MySQL or PostgreSQL as the database and can be hosted on 
+                platforms like InfinityFree initially.
+            </p>
+            <p>
+                InternInSpot delivers value for all stakeholders: students gain easier access to verified internships aligned 
+                with their career goals, companies benefit from faster and more targeted intern recruitment, and universities receive a tool to support student career development.
+            </p>
+        </div>
+    </section>
+
+    <script src="{% static 'js/interninspot.js' %}"></script>
+</body>
+</html>
